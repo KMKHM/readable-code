@@ -8,7 +8,7 @@ public class VeryBeginner implements GameLevel {
     }
 
     @Override
-    public int getColumnSize() {
+    public int getColSize() {
         return 5;
     }
 
