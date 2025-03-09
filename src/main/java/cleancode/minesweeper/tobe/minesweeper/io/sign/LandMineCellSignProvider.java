@@ -14,6 +14,6 @@ public class LandMineCellSignProvider implements CellSignProvidable {
 
     @Override
     public boolean support(CellSnapshot cellSnapshot) {
-        return cellSnapshot.isSameStatus(CellSnapshotStatus.LANDMINE);
+        return cellSnapshot.isSameStatus(CellSnapshotStatus.LAND_MINE);
     }
 }

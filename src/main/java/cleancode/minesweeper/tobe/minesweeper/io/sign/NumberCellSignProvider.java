@@ -8,7 +8,7 @@ public class NumberCellSignProvider implements CellSignProvidable {
 
     @Override
     public String provide(CellSnapshot cellSnapshot) {
-        return String.valueOf(cellSnapshot.getNearByLandMineCount());
+        return String.valueOf(cellSnapshot.getNearbyLandMineCount());
     }
 
     @Override

@@ -42,6 +42,7 @@ public class Minesweeper implements GameInitializable, GameRunnable {
                 outputHandler.showExceptionMessage(e);
             } catch (Exception e) {
                 outputHandler.showSimpleMessage("프로그램에 문제가 생겼습니다.");
+                e.printStackTrace();
             }
         }
 
