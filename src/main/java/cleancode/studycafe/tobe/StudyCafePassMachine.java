@@ -13,10 +13,15 @@ import cleancode.studycafe.tobe.model.StudyCafePassType;
 import java.util.List;
 
 public class StudyCafePassMachine {
+    private final StudyCafeConfig studyCafeConfig;
+    private final InputHandler inputHandler;
+    private final OutputHandler outputHandler;
 
-    private final InputHandler inputHandler = new ConsoleInputHandler();
-    private final OutputHandler outputHandler = new ConsoleOutputHandler();
-
+    public StudyCafePassMachine(StudyCafeConfig studCafeConfig) {
+        this.studyCafeConfig = studCafeConfig;
+        this.inputHandler = studCafeConfig.getInputHandler();
+        this.outputHandler = studCafeConfig.getOutputHandler();
+    }
     public void run() {
         try {
             outputHandler.showWelcomeMessage();
