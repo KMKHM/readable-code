@@ -1,8 +1,7 @@
 package cleancode.studycafe.tobe;
 
+import cleancode.studycafe.tobe.config.StudyCafeConfig;
 import cleancode.studycafe.tobe.exception.AppException;
-import cleancode.studycafe.tobe.io.ConsoleInputHandler;
-import cleancode.studycafe.tobe.io.ConsoleOutputHandler;
 import cleancode.studycafe.tobe.io.InputHandler;
 import cleancode.studycafe.tobe.io.OutputHandler;
 import cleancode.studycafe.tobe.io.StudyCafeFileHandler;
@@ -22,12 +21,15 @@ public class StudyCafePassMachine {
         this.inputHandler = studCafeConfig.getInputHandler();
         this.outputHandler = studCafeConfig.getOutputHandler();
     }
+
     public void run() {
+
         try {
+
             outputHandler.showWelcomeMessage();
             outputHandler.showAnnouncement();
-
             outputHandler.askPassTypeSelection();
+
             StudyCafePassType studyCafePassType = inputHandler.getPassTypeSelectingUserAction();
 
             if (studyCafePassType == StudyCafePassType.HOURLY) {

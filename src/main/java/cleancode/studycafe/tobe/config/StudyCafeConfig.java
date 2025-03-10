@@ -1,4 +1,4 @@
-package cleancode.studycafe.tobe;
+package cleancode.studycafe.tobe.config;
 
 import cleancode.studycafe.tobe.io.InputHandler;
 import cleancode.studycafe.tobe.io.OutputHandler;
