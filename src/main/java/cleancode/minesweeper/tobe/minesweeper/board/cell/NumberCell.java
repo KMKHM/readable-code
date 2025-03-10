@@ -1,6 +1,6 @@
 package cleancode.minesweeper.tobe.minesweeper.board.cell;
 
-public class NumberCell implements Cell{
+public class NumberCell implements Cell {
 
     private final int nearbyLandMineCount;
     private final CellState cellState = CellState.initialize();

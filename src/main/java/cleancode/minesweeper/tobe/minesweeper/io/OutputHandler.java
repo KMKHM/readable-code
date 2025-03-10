@@ -7,7 +7,7 @@ public interface OutputHandler {
 
     void showGameStartComments();
 
-    void showBoard(GameBoard board) ;
+    void showBoard(GameBoard board);
 
     void showGameWinningComment();
 
