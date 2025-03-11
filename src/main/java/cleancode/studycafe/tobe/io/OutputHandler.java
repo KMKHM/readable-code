@@ -18,6 +18,8 @@ public interface OutputHandler {
 
     void showPassOrderSummary(StudyCafePass selectedPass, StudyCafeLockerPass lockerPass);
 
+    void showPassOrderSummary(StudyCafePass selectedPass);
+
     void showSimpleMessage(String message);
 
 }
