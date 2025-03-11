@@ -34,6 +34,18 @@ public class StudyCafePass {
         return discountRate;
     }
 
+    public int getDiscountedPrice() {
+        return (int) (price * discountRate);
+    }
+
+    public int getTotalPrice(int discountPrice, StudyCafeLockerPass lockerPass) {
+        if (lockerPass != null) {
+            return price - discountPrice + lockerPass.getPrice();
+        }
+
+        return price - discountPrice;
+    }
+
     public String display() {
         if (passType == StudyCafePassType.HOURLY) {
             return String.format("%s시간권 - %d원", duration, price);
