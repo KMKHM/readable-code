@@ -9,8 +9,9 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StudyCafeFileHandler {
+public class StudyCafeFileHandler implements FileHandler {
 
+    @Override
     public List<StudyCafePass> readStudyCafePasses() {
 
         try {
@@ -21,6 +22,7 @@ public class StudyCafeFileHandler {
         }
     }
 
+    @Override
     public List<StudyCafeLockerPass> readLockerPasses() {
         try {
             List<String> lines = Files.readAllLines(Paths.get("src/main/resources/cleancode/studycafe/locker.csv"));
